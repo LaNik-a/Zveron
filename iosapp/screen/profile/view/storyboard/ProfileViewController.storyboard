@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Профиль-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="iosapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QpR-5z-4cG">
+                                <rect key="frame" x="137" y="124" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="acL-DS-gD4"/>
+                                    <constraint firstAttribute="height" constant="140" id="gJp-lr-jqG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHX-Fp-yqF">
+                                <rect key="frame" x="20" y="289" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8m-dP-VQG">
+                                <rect key="frame" x="20" y="343" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="toa-oG-xm0" customClass="RatingBar" customModule="iosapp" customModuleProvider="target">
+                                <rect key="frame" x="112" y="397" width="190" height="49"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" systemColor="systemYellowColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MYK-e4-hhO">
+                                <rect key="frame" x="20" y="471" width="374" height="267"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWd-9j-dax">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="47"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="06Q-JO-Lma"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Редактирование профиля">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCV-xW-CBE">
+                                        <rect key="frame" x="0.0" y="55" width="374" height="47"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="rnQ-5g-c6M"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Социальные сети">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17S-W3-OOK">
+                                        <rect key="frame" x="0.0" y="110" width="374" height="47"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="O1d-XT-SE8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Мои отзывы">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXJ-NL-iZd">
+                                        <rect key="frame" x="0.0" y="165" width="374" height="47"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="Zgm-al-44U"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Черный список">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21j-mD-MhX">
+                                        <rect key="frame" x="0.0" y="220" width="374" height="47"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="Ul0-N5-sJ2"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Удалить аккаунт">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPJ-QT-Evn">
+                                <rect key="frame" x="20" y="751" width="374" height="52"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="cH6-KD-pOJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выйти">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="toa-oG-xm0" firstAttribute="top" secondItem="q8m-dP-VQG" secondAttribute="bottom" constant="25" id="0zZ-x1-lGI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZHX-Fp-yqF" secondAttribute="trailing" constant="20" id="2EM-Bb-FED"/>
+                            <constraint firstItem="cPJ-QT-Evn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="72z-4a-gkr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="toa-oG-xm0" secondAttribute="trailing" constant="112" id="9at-jT-QCC"/>
+                            <constraint firstItem="q8m-dP-VQG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="FD9-nK-grO"/>
+                            <constraint firstItem="QpR-5z-4cG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="NmN-X7-cFt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cPJ-QT-Evn" secondAttribute="bottom" constant="10" id="QQU-gE-1FB"/>
+                            <constraint firstItem="toa-oG-xm0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="112" id="R08-fM-vBS"/>
+                            <constraint firstItem="ZHX-Fp-yqF" firstAttribute="top" secondItem="QpR-5z-4cG" secondAttribute="bottom" constant="25" id="V3P-w5-5Cc"/>
+                            <constraint firstItem="ZHX-Fp-yqF" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="WiL-JN-zWZ"/>
+                            <constraint firstItem="q8m-dP-VQG" firstAttribute="top" secondItem="ZHX-Fp-yqF" secondAttribute="bottom" constant="25" id="aeH-5V-3Ea"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cPJ-QT-Evn" secondAttribute="trailing" constant="20" id="b50-Ti-sCi"/>
+                            <constraint firstItem="MYK-e4-hhO" firstAttribute="top" secondItem="toa-oG-xm0" secondAttribute="bottom" constant="25" id="bEx-t4-mak"/>
+                            <constraint firstItem="ZHX-Fp-yqF" firstAttribute="centerX" secondItem="QpR-5z-4cG" secondAttribute="centerX" id="f1x-CN-jH4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MYK-e4-hhO" secondAttribute="trailing" constant="20" id="hx8-Pd-GfY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q8m-dP-VQG" secondAttribute="trailing" constant="20" id="nFS-Ps-TNF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="toa-oG-xm0" secondAttribute="bottom" constant="367" id="o6c-eh-OzM"/>
+                            <constraint firstItem="MYK-e4-hhO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="qyD-JW-ps2"/>
+                            <constraint firstItem="QpR-5z-4cG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="137" id="raB-2n-cMB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QpR-5z-4cG" secondAttribute="trailing" constant="137" id="xtX-wx-r6N"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.fill" catalog="system" id="yJ3-uL-r7D"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnBlockList" destination="HXJ-NL-iZd" id="X0g-iQ-db1"/>
+                        <outlet property="btnDeleteAccount" destination="21j-mD-MhX" id="noB-Cn-atv"/>
+                        <outlet property="btnEditProfile" destination="tWd-9j-dax" id="a60-gm-iqA"/>
+                        <outlet property="btnExit" destination="cPJ-QT-Evn" id="lVv-YZ-lWB"/>
+                        <outlet property="btnNetworks" destination="tCV-xW-CBE" id="IXy-HN-jiM"/>
+                        <outlet property="btnReviews" destination="17S-W3-OOK" id="GAL-jo-mZu"/>
+                        <outlet property="imgView" destination="QpR-5z-4cG" id="ggh-tG-xI7"/>
+                        <outlet property="labelName" destination="q8m-dP-VQG" id="jxj-fG-QFb"/>
+                        <outlet property="labelSurname" destination="ZHX-Fp-yqF" id="ABh-zJ-chI"/>
+                        <outlet property="ratingBar" destination="toa-oG-xm0" id="e46-Fl-J5q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

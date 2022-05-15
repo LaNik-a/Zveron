@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Главная-->
+        <scene sceneID="ouA-ri-HIK">
+            <objects>
+                <navigationController storyboardIdentifier="mainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zWM-nq-Tie" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Главная" image="favorite" id="fT7-wt-5nV"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="21g-wp-aLO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="L0N-cc-lDD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xau-N3-w9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2030" y="94"/>
+        </scene>
+        <!--Просмотр объявлений-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MainScreenViewController" customModule="iosapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="MGc-T5-CeF">
+                                <rect key="frame" x="16" y="104" width="382" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="750" text="Категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMK-rZ-AZi">
+                                <rect key="frame" x="8" y="171" width="398" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fHk-KS-w80" userLabel="AdvertCollectionView">
+                                <rect key="frame" x="0.0" y="469" width="414" height="427"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DMp-fK-68B">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="swj-js-2hB"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="IK6-fr-Tc0"/>
+                                </connections>
+                            </collectionView>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIu-Yj-FL9">
+                                <rect key="frame" x="0.0" y="409" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem title="changeStyle" style="plain" id="taM-8L-mUh">
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <connections>
+                                            <action selector="changeTypeContentLayout:" destination="Y6W-OH-hqX" id="Rkn-Su-Si2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KNV-kW-hXF"/>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <toolbarAppearance key="standardAppearance">
+                                    <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </toolbarAppearance>
+                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="VWr-ei-aad">
+                                <rect key="frame" x="24" y="223" width="366" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="JCr-Ln-LJ1">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="170"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToFilterScreen:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OJ4-XG-Otm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Kyj-Ci-hNg">
+                                        <rect key="frame" x="199" y="0.0" width="167" height="170"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="Sae-NY-TS9"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wIu-Yj-FL9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0z2-AX-zhb"/>
+                            <constraint firstItem="MGc-T5-CeF" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="1Oi-T4-17r"/>
+                            <constraint firstItem="fHk-KS-w80" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="4uO-rg-xaK"/>
+                            <constraint firstItem="wIu-Yj-FL9" firstAttribute="top" secondItem="VWr-ei-aad" secondAttribute="bottom" constant="16" id="7Q9-ty-WZy"/>
+                            <constraint firstItem="wIu-Yj-FL9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="NrH-WR-IVz"/>
+                            <constraint firstItem="fHk-KS-w80" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="OT6-fT-zFM"/>
+                            <constraint firstItem="MGc-T5-CeF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="VXu-VJ-2no"/>
+                            <constraint firstItem="VWr-ei-aad" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="adJ-Di-Kqi"/>
+                            <constraint firstAttribute="trailing" secondItem="OMK-rZ-AZi" secondAttribute="trailing" constant="8" id="d8J-ej-f8g"/>
+                            <constraint firstItem="OMK-rZ-AZi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="fCc-fF-gpm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VWr-ei-aad" secondAttribute="trailing" constant="24" id="hMe-ns-Foh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MGc-T5-CeF" secondAttribute="trailing" constant="16" id="i3f-Y4-iHU"/>
+                            <constraint firstAttribute="bottom" secondItem="fHk-KS-w80" secondAttribute="bottom" id="re6-Gu-ZOF"/>
+                            <constraint firstItem="OMK-rZ-AZi" firstAttribute="top" secondItem="MGc-T5-CeF" secondAttribute="bottom" constant="16" id="s7r-Kn-Dc0"/>
+                            <constraint firstItem="fHk-KS-w80" firstAttribute="top" secondItem="wIu-Yj-FL9" secondAttribute="bottom" constant="16" id="xBv-yv-mCe"/>
+                            <constraint firstItem="VWr-ei-aad" firstAttribute="top" secondItem="OMK-rZ-AZi" secondAttribute="bottom" constant="16" id="zHt-3L-Pkn"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Просмотр объявлений" largeTitleDisplayMode="never" id="EGX-NY-hcM"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="adCollectionView" destination="fHk-KS-w80" id="9dl-xu-vXI"/>
+                        <outlet property="buttonCategoryAnimal" destination="JCr-Ln-LJ1" id="8w4-R6-jvQ"/>
+                        <outlet property="buttonCategoryProduct" destination="Kyj-Ci-hNg" id="ExG-QI-o5m"/>
+                        <outlet property="changePresentStyleButton" destination="taM-8L-mUh" id="xTr-eh-kx8"/>
+                        <outlet property="toolBar" destination="wIu-Yj-FL9" id="H2S-EP-EgL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488.40579710144931" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="favorite" width="24" height="24"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

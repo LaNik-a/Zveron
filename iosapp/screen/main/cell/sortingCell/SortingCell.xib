@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="CTb-DV-Ekm" customClass="SortingCell" customModule="iosapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="492" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CTb-DV-Ekm" id="wZU-y3-e1H">
+                <rect key="frame" x="0.0" y="0.0" width="492" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5v-WM-Vt3">
+                        <rect key="frame" x="154.5" y="0.0" width="337.5" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="Rfk-N6-avS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao1-yr-7zq">
+                        <rect key="frame" x="16" y="16" width="130.5" height="98"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ao1-yr-7zq" secondAttribute="height" multiplier="4:3" id="0Jb-99-mo1"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L5v-WM-Vt3" firstAttribute="leading" secondItem="ao1-yr-7zq" secondAttribute="trailing" constant="8" id="CG0-9P-l8E"/>
+                    <constraint firstAttribute="trailing" secondItem="L5v-WM-Vt3" secondAttribute="trailing" id="E0a-gB-SiI"/>
+                    <constraint firstAttribute="bottom" secondItem="ao1-yr-7zq" secondAttribute="bottom" constant="16" id="E2k-tg-xSY"/>
+                    <constraint firstItem="L5v-WM-Vt3" firstAttribute="top" secondItem="wZU-y3-e1H" secondAttribute="top" id="Kjj-Dm-GfX"/>
+                    <constraint firstItem="ao1-yr-7zq" firstAttribute="leading" secondItem="wZU-y3-e1H" secondAttribute="leading" constant="16" id="cPp-It-qQ1"/>
+                    <constraint firstItem="ao1-yr-7zq" firstAttribute="top" secondItem="wZU-y3-e1H" secondAttribute="top" constant="16" id="nag-vD-56Y"/>
+                    <constraint firstAttribute="bottom" secondItem="L5v-WM-Vt3" secondAttribute="bottom" id="u1M-IN-x4M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="logoImage" destination="ao1-yr-7zq" id="5ii-1q-nhb"/>
+                <outlet property="optionLabel" destination="L5v-WM-Vt3" id="GKW-cl-zaw"/>
+            </connections>
+            <point key="canvasLocation" x="-230.43478260869566" y="-603.34821428571422"/>
+        </tableViewCell>
+    </objects>
+</document>

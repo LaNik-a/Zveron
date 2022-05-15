@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Phone Picker View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PhonePickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PhonePickerViewController" customModule="iosapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jP-qb-2fl" userLabel="Continue">
+                                <rect key="frame" x="16" y="732" width="382" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="tjf-vl-3b7"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Продолжить"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+7 000 000-00-00" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-Ej-d6Z" userLabel="InputPhone">
+                                <rect key="frame" x="64" y="186" width="286" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="P5L-8e-ej0"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                <connections>
+                                    <outlet property="delegate" destination="W5g-eo-0q8" id="7PZ-pD-mR0"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHE-k8-NKI" userLabel="Topic">
+                                <rect key="frame" x="16" y="108" width="382" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8A9-Xo-BXa" userLabel="SignInWithPassword">
+                                <rect key="frame" x="16" y="808" width="382" height="30"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Войти с помощью пароля"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На него мы позвоним и сообщим код доступа" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dp7-di-TrU" userLabel="SmsInfo">
+                                <rect key="frame" x="24" y="153" width="366" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ix6-dE-n6j" customClass="Alert" customModule="iosapp" customModuleProvider="target">
+                                <rect key="frame" x="77" y="283" width="100" height="30"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hHE-k8-NKI" secondAttribute="trailing" constant="16" id="3Gr-f4-cZu"/>
+                            <constraint firstItem="8A9-Xo-BXa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6ep-fU-SO6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8A9-Xo-BXa" secondAttribute="bottom" constant="24" id="EFj-Tx-JBD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dp7-di-TrU" secondAttribute="trailing" constant="24" id="IBo-8t-izQ"/>
+                            <constraint firstItem="Ix6-dE-n6j" firstAttribute="leading" secondItem="JOF-Ej-d6Z" secondAttribute="leading" id="OS2-mF-VUp"/>
+                            <constraint firstItem="hHE-k8-NKI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="PmS-x4-hhi"/>
+                            <constraint firstItem="dp7-di-TrU" firstAttribute="top" secondItem="hHE-k8-NKI" secondAttribute="bottom" constant="16" id="QTj-vN-7dv"/>
+                            <constraint firstItem="8A9-Xo-BXa" firstAttribute="top" secondItem="8jP-qb-2fl" secondAttribute="bottom" constant="16" id="Xdj-b0-yPQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8jP-qb-2fl" secondAttribute="trailing" constant="16" id="gmd-0D-NtG"/>
+                            <constraint firstItem="dp7-di-TrU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="lU8-QP-BtL"/>
+                            <constraint firstItem="JOF-Ej-d6Z" firstAttribute="top" secondItem="dp7-di-TrU" secondAttribute="bottom" constant="16" id="oTv-Gh-JX6"/>
+                            <constraint firstItem="Ix6-dE-n6j" firstAttribute="top" secondItem="JOF-Ej-d6Z" secondAttribute="bottom" constant="8" id="odB-af-rwE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JOF-Ej-d6Z" secondAttribute="trailing" constant="64" id="rqv-tv-VV7"/>
+                            <constraint firstItem="JOF-Ej-d6Z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="thy-Yy-A5I"/>
+                            <constraint firstItem="hHE-k8-NKI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="uW4-SO-sKY"/>
+                            <constraint firstItem="8jP-qb-2fl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="vqS-z8-Irm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8A9-Xo-BXa" secondAttribute="trailing" constant="16" id="zA2-hN-MRs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alert" destination="Ix6-dE-n6j" id="eRM-uL-bap"/>
+                        <outlet property="continueButton" destination="8jP-qb-2fl" id="vGO-Cr-Woc"/>
+                        <outlet property="inputMask" destination="W5g-eo-0q8" id="l36-3b-ljK"/>
+                        <outlet property="inputPhoneTextField" destination="JOF-Ej-d6Z" id="BP1-RN-4le"/>
+                        <outlet property="signInByPhoneAndPasswordButton" destination="8A9-Xo-BXa" id="U2N-jt-qIk"/>
+                        <outlet property="subTopicLabel" destination="dp7-di-TrU" id="caN-s1-aNe"/>
+                        <outlet property="topicLabel" destination="hHE-k8-NKI" id="OtV-cH-GaN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="W5g-eo-0q8" customClass="NotifyingMaskedTextFieldDelegate" customModule="iosapp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
